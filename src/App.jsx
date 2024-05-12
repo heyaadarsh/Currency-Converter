@@ -12,6 +12,7 @@ function App() {
   const currencyInfo = useCurrencyInfo(from)
 
   const options = Object.keys(currencyInfo);
+  console.log(options);
 
   const swap = () => {
     setFrom(to)
@@ -47,7 +48,7 @@ function App() {
                             amount={amount}
                             currencyOptions={options}
                             onCurrencyChange={(currency)=>{
-                              setAmount(currency)
+                              setFrom(currency)
                             }}
                             selectCurrency={from}
                             onAmountChange={(currency)=> {
